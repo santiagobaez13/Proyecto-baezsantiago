@@ -1,0 +1,46 @@
+/* NavBar.css */
+
+/* Estilo general de la barra de navegación */
+.NavBar {
+    background-color: #fcfcfc; /* Fondo gris oscuro */
+    padding: 10px 0; /* Espaciado interno superior e inferior */
+  }
+  
+  /* Estilo del título de la tienda */
+  .NavBar .navbar-brand {
+    font-size: 24px;
+    color: #020000; /* Texto negro */
+    font-weight: bold;
+    text-decoration: none; /* Elimina el subrayado */
+    margin-bottom: 20px; /* Aumenta el margen inferior para separar del menú */
+  }
+  
+  .NavBar .navbar-brand:hover {
+    color: #000000; 
+  }
+  
+  .NavBar .navbar-nav {
+    margin-top: 20px; 
+  }
+  
+  .NavBar .navbar-nav .nav-link {
+    color: #000000; 
+    margin-right: 20px; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+  }
+  
+  .NavBar .navbar-nav .nav-link:hover {
+    color: #f4eae2; 
+  }
+  
+  .NavBar .btn-cart {
+    background-color: transparent; 
+    color: #ffffff; 
+    border: none;
+    margin-left: auto; 
+  }
+  
+  .NavBar .btn-cart img {
+    width: 30px; 
+  }

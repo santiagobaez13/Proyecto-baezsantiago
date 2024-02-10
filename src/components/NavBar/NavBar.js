@@ -1,33 +1,40 @@
-import CartWidget from "../CartWidget/CartWidget"
-import { NavLink, Link } from "react-router-dom"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+import './NavBar.css';  
+
+
 
 
 const NavBar = () => {
-    return (
-        <nav className="NavBar">
-            <Link to='/'>
-                <h3>
-                    Ecommerce
-                </h3>
-            </Link>
-            <div className="Categories">
-                <NavLink to="/category/celular" className={({ isActive }) => (isActive ? 'ActiveOption' : 'Option')}>      Celuares          </NavLink>
-                <NavLink to='category/tablets' className={({ isActive }) => (isActive ? 'ActiveOption' : 'Option')}> Tablets </NavLink>
-                <NavLink to='category/notebooks' className={({ isActive }) => (isActive ? 'ActiveOption' : 'Option')}> Notebooks </NavLink>
+  return (
+    <Navbar className="NavBar" style={{ backgroundColor: '#e7c985' }} expand="lg">
 
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          
+          Mundo Tech
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/category/celular">
+              Celulares
+            </Nav.Link>
+            <Nav.Link as={Link} to="/category/tablets">
+              Tablets
+            </Nav.Link>
+            <Nav.Link as={Link} to="/category/notebooks">
+              Notebooks
+            </Nav.Link>
+          </Nav>
+          <Button variant="primary" as={Link} to="/cart">
+            Ver Carrito
+          </Button>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+};
 
-            </div>
-
-            <CartWidget />
-        </nav>
-
-
-
-
-    )
-
-
-
-
-}
-export default NavBar
+export default NavBar;
